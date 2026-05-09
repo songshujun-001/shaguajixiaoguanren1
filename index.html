@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>傻瓜绩效管人 - 小老板公平管人系统</title>
+<meta name="description" content="专为5-50人小微企业老板设计的数字化公平管人系统。不用懂绩效、不用天天盯人，30秒启用规则包，第一个月免费。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:#1a1a2e;line-height:1.7;background:#fafbfc}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:80px 20px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,48px);margin-bottom:16px;font-weight:800}
+.hero .sub{font-size:clamp(16px,3vw,22px);opacity:.9;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero .cta{display:inline-block;background:#e94560;color:#fff;padding:16px 48px;border-radius:50px;font-size:20px;font-weight:700;text-decoration:none;transition:all .3s;box-shadow:0 8px 30px rgba(233,69,96,.4)}
+.hero .cta:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(233,69,96,.6)}
+.hero .trust{font-size:14px;opacity:.7;margin-top:20px}
+section{padding:80px 20px;max-width:1100px;margin:0 auto}
+h2{font-size:clamp(24px,4vw,36px);text-align:center;margin-bottom:16px;font-weight:800}
+.section-sub{text-align:center;color:#666;margin-bottom:48px;font-size:18px}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.pain-card{background:#fff;padding:24px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,.06);text-align:center;transition:transform .2s}
+.pain-card:hover{transform:translateY(-4px)}
+.pain-card .icon{font-size:40px;margin-bottom:12px}
+.pain-card h4{font-size:17px;margin-bottom:8px}
+.pain-card p{font-size:14px;color:#666}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.vs-box{padding:40px;border-radius:20px;text-align:center}
+.vs-bad{background:#fff5f5;border:2px solid #fecaca}
+.vs-good{background:#f0fdf4;border:2px solid #bbf7d0}
+.vs-box h3{font-size:20px;margin-bottom:16px}
+.vs-box ul{list-style:none;text-align:left}
+.vs-box li{padding:6px 0;font-size:15px}
+.vs-box li:before{content:"✓ ";color:#22c55e;font-weight:bold}
+.vs-bad li:before{content:"✗ ";color:#ef4444}
+.three-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:#fff;padding:32px;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,.06);text-align:center}
+.card .big-emoji{font-size:56px;margin-bottom:16px}
+.card h3{font-size:22px;margin-bottom:12px}
+.card p{font-size:15px;color:#555;line-height:1.8}
+.story{background:#fff;padding:32px;border-radius:20px;box-shadow:0 2px 12px rgba(0,0,0,.05);margin-bottom:20px;border-left:4px solid #e94560}
+.story .quote{font-size:16px;font-style:italic;color:#555;margin-bottom:8px}
+.story .author{font-size:14px;color:#888}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.price-card{background:#fff;padding:32px;border-radius:20px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.price-card.featured{border:3px solid #e94560;transform:scale(1.03)}
+.price-card .price{font-size:42px;font-weight:800;color:#1a1a2e;margin:16px 0}
+.price-card .price span{font-size:16px;color:#888}
+.price-card ul{list-style:none;text-align:left;margin:20px 0}
+.price-card li{padding:6px 0;font-size:15px}
+.price-card li:before{content:"✓ ";color:#22c55e}
+.price-card .btn{display:inline-block;background:#e94560;color:#fff;padding:12px 36px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px}
+.faq-item{background:#fff;padding:24px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.04);margin-bottom:12px}
+.faq-item h4{font-size:17px;margin-bottom:8px;color:#1a1a2e}
+.faq-item p{font-size:15px;color:#555}
+.final-cta{background:linear-gradient(135deg,#e94560,#c23152);color:#fff;text-align:center;padding:80px 20px}
+.final-cta h2{color:#fff;font-size:32px}
+.final-cta .cta{display:inline-block;background:#fff;color:#e94560;padding:16px 56px;border-radius:50px;font-size:22px;font-weight:700;text-decoration:none;margin-top:24px;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+footer{text-align:center;padding:40px;color:#888;font-size:14px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>每天3分钟，让团队自己管自己</h1>
+  <p class="sub">「傻瓜绩效管人」——专为5-50人小老板设计的公平管人系统。<br>不懂绩效？没关系。不想学管理？没关系。30秒开跑，第一个月免费。</p>
+  <a href="#cta" class="cta">🔥 免费试用30天</a>
+  <p class="trust">🟢 第一个月不扣钱 · 不处罚 · 不公开排名 | 87位小老板正在试用</p>
+</section>
+
+<section>
+  <h2>你是不是也在经历这些？</h2>
+  <p class="section-sub">5件事，件件要命</p>
+  <div class="pain-grid">
+    <div class="pain-card"><div class="icon">😤</div><h4>好员工走了</h4><p>干最多的人没被看见，等他提离职你才后悔</p></div>
+    <div class="pain-card"><div class="icon">😶</div><h4>亲戚不敢说</h4><p>张嘴就是不给面子，不张嘴团队不服</p></div>
+    <div class="pain-card"><div class="icon">😵</div><h4>天天调解扯皮</h4><p>销售骂后勤慢，后勤骂销售乱承诺</p></div>
+    <div class="pain-card"><div class="icon">😩</div><h4>凭感觉做决定</h4><p>谁该涨薪说不清，谁该辞退没证据</p></div>
+    <div class="pain-card"><div class="icon">🤐</div><h4>说了也没人服</h4><p>"你凭什么说我不好？"——没数据就没底气</p></div>
+  </div>
+</section>
+
+<section style="background:#f0f4ff">
+  <h2>我们不是帮你"算账"<br>是帮你"设计游戏规则"</h2>
+  <div class="vs" style="margin-top:40px">
+    <div class="vs-box vs-bad">
+      <h3>传统绩效软件</h3>
+      <ul>
+        <li>你设计制度 → 系统计算</li>
+        <li>适合大公司、有HR</li>
+        <li>要学KPI/OKR</li>
+        <li>功能多到你眼花</li>
+        <li>上来就要你填表</li>
+      </ul>
+    </div>
+    <div class="vs-box vs-good">
+      <h3>傻瓜绩效管人</h3>
+      <ul>
+        <li>你选规则包 → 系统帮你执行</li>
+        <li>适合5-50人、老板亲自管</li>
+        <li>30秒选行业、点确定</li>
+        <li>每天只看3分钟</li>
+        <li>第一个月只记录不处罚</li>
+      </ul>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:32px;font-size:18px;font-weight:600">不是老板针对谁。是规则、是数据、是三个月记录在说话。</p>
+</section>
+
+<section>
+  <h2>三榜定乾坤</h2>
+  <p class="section-sub">好的表扬，差的提醒，严重的处理</p>
+  <div class="three-cards">
+    <div class="card">
+      <div class="big-emoji">🟢</div>
+      <h3>红榜（公开）</h3>
+      <p>优秀的人、进步的人、爱帮人的人。让全公司知道谁值得学。不是老板口头夸一句，是系统记录、全员可见。</p>
+    </div>
+    <div class="card">
+      <div class="big-emoji">🟡</div>
+      <h3>灰榜（私密）</h3>
+      <p>有点问题的人、需要提醒的人。只有老板和本人能看见。不是公开处刑，是轻轻拍一下肩膀。大多数人收到就改了。</p>
+    </div>
+    <div class="card">
+      <div class="big-emoji">🔴</div>
+      <h3>风险榜（触发面谈）</h3>
+      <p>连续拖后腿的人。系统帮你准备好所有数据、趋势图和面谈提纲。你永远是做决定的人。系统只帮你说清楚。</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fafafa">
+  <h2>他们已经在用了</h2>
+  <div class="story"><p class="quote">"我小舅子在仓库拖了3年。不是系统多厉害，是有了数据，我终于敢开口了。没吵一句，两个月后准时率从31%提到71%。"</p><p class="author">—— 五金店老板老张，12人团队</p></div>
+  <div class="story"><p class="quote">"店里最勤快的那个美容师，干了3年，第一次被当众表扬的时候哭了。她以为我一直没看见。红榜让她被全店看见了。"</p><p class="author">—— 美容院苏姐，8人团队</p></div>
+  <div class="story"><p class="quote">"销售和后勤吵了两年。启用助攻分后，互相帮忙的次数翻了3倍。不是人变了，是规则变了。"</p><p class="author">—— 装修公司阿强，18人团队</p></div>
+</section>
+
+<section id="cta">
+  <h2>试一个月不要钱。合适继续，不合适停掉。</h2>
+  <div class="pricing-grid" style="margin-top:40px">
+    <div class="price-card">
+      <h3>基础版</h3>
+      <p>5-10人团队</p>
+      <div class="price">¥199<span>/月</span></div>
+      <ul><li>8套规则包</li><li>三榜机制</li><li>助攻分</li><li>基础榜单</li><li>30天免费试用</li></ul>
+      <a href="#" class="btn">免费试用 →</a>
+    </div>
+    <div class="price-card featured">
+      <h3>标准版 ⭐推荐</h3>
+      <p>11-30人团队</p>
+      <div class="price">¥399<span>/月</span></div>
+      <ul><li>8套规则包+自定义</li><li>全部榜单</li><li>面谈整改复评</li><li>多维度排名</li><li>30天免费试用</li></ul>
+      <a href="#" class="btn">免费试用 →</a>
+    </div>
+    <div class="price-card">
+      <h3>专业版</h3>
+      <p>31-50人团队</p>
+      <div class="price">¥699<span>/月</span></div>
+      <ul><li>全部功能</li><li>AI面谈教练</li><li>专属顾问</li><li>高级数据分析</li><li>30天免费试用</li></ul>
+      <a href="#" class="btn">免费试用 →</a>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:24px;color:#888">别算系统多少钱，算你因为"不公平"走了几个好员工，损失了多少钱。</p>
+</section>
+
+<section>
+  <h2>常见问题</h2>
+  <div class="faq-item"><h4>员工会不会抵触？</h4><p>第一个月只记录、不处罚、不公开排名。让员工先看见规则是公平的。我们见过太多：第一个月骂系统，第二个月发现红榜没自己，第三个月主动表现。</p></div>
+  <div class="faq-item"><h4>太复杂怎么办？</h4><p>30秒选行业、点确定。每天看3分钟手机。超过3分钟你来找我。名字叫"傻瓜"不是开玩笑。</p></div>
+  <div class="faq-item"><h4>5个人能用吗？</h4><p>专门有5人以内简化版——不搞公开排名，只帮你记录和提醒。越小越需要规则。</p></div>
+  <div class="faq-item"><h4>亲戚员工怎么管？</h4><p>有专门的"人情员工管理型"规则包。不是老板针对谁，是数据说话。老板只是"传达数据的人"。</p></div>
+</section>
+
+<div class="final-cta">
+  <h2>你那个"不敢管"的员工<br>还要拖你多久？</h2>
+  <p style="font-size:18px;opacity:.9;margin:16px 0">第一个月免费。不扣钱、不处罚、不公开。<br>30天后没效果？直接停掉。你什么都不损失。</p>
+  <a href="#" class="cta">🔥 免费试用30天</a>
+</div>
+
+<footer>
+  <p>「傻瓜绩效管人」· 小老板公平管人系统 | 5-50人小微企业专属</p>
+  <p>联系微信：ssj-001 | 邮箱：447923446@qq.com</p>
+</footer>
+
+</body>
+</html>
