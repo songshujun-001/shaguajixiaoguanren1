@@ -2,184 +2,353 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>傻瓜绩效管人 - 小老板公平管人系统</title>
-<meta name="description" content="专为5-50人小微企业老板设计的数字化公平管人系统。不用懂绩效、不用天天盯人，30秒启用规则包，第一个月免费。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>傻瓜绩效管人 — 小老板公平管人系统</title>
+<meta name="description" content="专为5-50人小微企业设计的公平管人系统。不用懂绩效、不用天天盯人，30秒启用规则包，第一个月免费。">
+<meta name="keywords" content="小老板管人,绩效管理,小微企业,公平绩效,员工考核,门店管理">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:#1a1a2e;line-height:1.7;background:#fafbfc}
-.hero{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:80px 20px;text-align:center}
-.hero h1{font-size:clamp(28px,5vw,48px);margin-bottom:16px;font-weight:800}
-.hero .sub{font-size:clamp(16px,3vw,22px);opacity:.9;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto}
-.hero .cta{display:inline-block;background:#e94560;color:#fff;padding:16px 48px;border-radius:50px;font-size:20px;font-weight:700;text-decoration:none;transition:all .3s;box-shadow:0 8px 30px rgba(233,69,96,.4)}
-.hero .cta:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(233,69,96,.6)}
-.hero .trust{font-size:14px;opacity:.7;margin-top:20px}
-section{padding:80px 20px;max-width:1100px;margin:0 auto}
-h2{font-size:clamp(24px,4vw,36px);text-align:center;margin-bottom:16px;font-weight:800}
-.section-sub{text-align:center;color:#666;margin-bottom:48px;font-size:18px}
-.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.pain-card{background:#fff;padding:24px;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,.06);text-align:center;transition:transform .2s}
-.pain-card:hover{transform:translateY(-4px)}
-.pain-card .icon{font-size:40px;margin-bottom:12px}
-.pain-card h4{font-size:17px;margin-bottom:8px}
-.pain-card p{font-size:14px;color:#666}
-.vs{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.vs-box{padding:40px;border-radius:20px;text-align:center}
-.vs-bad{background:#fff5f5;border:2px solid #fecaca}
-.vs-good{background:#f0fdf4;border:2px solid #bbf7d0}
-.vs-box h3{font-size:20px;margin-bottom:16px}
-.vs-box ul{list-style:none;text-align:left}
-.vs-box li{padding:6px 0;font-size:15px}
-.vs-box li:before{content:"✓ ";color:#22c55e;font-weight:bold}
-.vs-bad li:before{content:"✗ ";color:#ef4444}
-.three-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.card{background:#fff;padding:32px;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,.06);text-align:center}
-.card .big-emoji{font-size:56px;margin-bottom:16px}
-.card h3{font-size:22px;margin-bottom:12px}
-.card p{font-size:15px;color:#555;line-height:1.8}
-.story{background:#fff;padding:32px;border-radius:20px;box-shadow:0 2px 12px rgba(0,0,0,.05);margin-bottom:20px;border-left:4px solid #e94560}
-.story .quote{font-size:16px;font-style:italic;color:#555;margin-bottom:8px}
-.story .author{font-size:14px;color:#888}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.price-card{background:#fff;padding:32px;border-radius:20px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06)}
-.price-card.featured{border:3px solid #e94560;transform:scale(1.03)}
-.price-card .price{font-size:42px;font-weight:800;color:#1a1a2e;margin:16px 0}
-.price-card .price span{font-size:16px;color:#888}
-.price-card ul{list-style:none;text-align:left;margin:20px 0}
-.price-card li{padding:6px 0;font-size:15px}
-.price-card li:before{content:"✓ ";color:#22c55e}
-.price-card .btn{display:inline-block;background:#e94560;color:#fff;padding:12px 36px;border-radius:50px;font-weight:700;text-decoration:none;margin-top:16px}
-.faq-item{background:#fff;padding:24px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.04);margin-bottom:12px}
-.faq-item h4{font-size:17px;margin-bottom:8px;color:#1a1a2e}
-.faq-item p{font-size:15px;color:#555}
-.final-cta{background:linear-gradient(135deg,#e94560,#c23152);color:#fff;text-align:center;padding:80px 20px}
-.final-cta h2{color:#fff;font-size:32px}
-.final-cta .cta{display:inline-block;background:#fff;color:#e94560;padding:16px 56px;border-radius:50px;font-size:22px;font-weight:700;text-decoration:none;margin-top:24px;box-shadow:0 8px 30px rgba(0,0,0,.3)}
-footer{text-align:center;padding:40px;color:#888;font-size:14px}
+:root{--bg:#f8f9fb;--card:#fff;--text:#1a1a2e;--sub:#555;--accent:#2563eb;--accent2:#e94560;--green:#16a34a;--border:#e5e7eb;--shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif;color:var(--text);background:var(--bg);line-height:1.68;-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+h1,h2,h3{letter-spacing:-0.02em}
+h2{font-size:clamp(28px,4vw,40px);text-align:center;margin-bottom:16px;font-weight:800}
+.section-label{text-align:center;color:var(--accent);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.15em;margin-bottom:8px}
+.section-sub{text-align:center;color:var(--sub);font-size:18px;max-width:600px;margin:0 auto 60px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .logo{font-weight:800;font-size:18px;color:var(--text);text-decoration:none}
+nav .logo span{color:var(--accent2)}
+nav .nav-cta{background:var(--accent2);color:#fff;padding:8px 20px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s}
+nav .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(233,69,96,.4)}
+
+/* HERO */
+.hero{padding:140px 0 120px;text-align:center;background:linear-gradient(180deg,#eff6ff 0%,var(--bg) 100%)}
+.hero .badge{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:50px;padding:6px 18px;font-size:13px;color:var(--sub);margin-bottom:24px}
+.hero .badge b{color:var(--accent2)}
+.hero h1{font-size:clamp(36px,6vw,56px);font-weight:900;line-height:1.15;margin-bottom:20px;background:linear-gradient(135deg,#1a1a2e 0%,#3b5998 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .hero-sub{font-size:clamp(16px,2.5vw,20px);color:var(--sub);max-width:700px;margin:0 auto 36px}
+.hero .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero .cta-primary{background:var(--accent2);color:#fff;padding:16px 40px;border-radius:50px;font-size:18px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 8px 30px rgba(233,69,96,.3)}
+.hero .cta-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(233,69,96,.45)}
+.hero .cta-secondary{background:var(--card);color:var(--text);padding:16px 40px;border-radius:50px;font-size:18px;font-weight:600;text-decoration:none;border:1px solid var(--border);transition:all .25s}
+.hero .cta-secondary:hover{border-color:#c4c4c4;transform:translateY(-2px)}
+.hero .trust-bar{margin-top:48px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;font-size:14px;color:var(--sub)}
+.hero .trust-bar div{display:flex;align-items:center;gap:6px}
+.hero .trust-bar .dot{width:8px;height:8px;background:var(--green);border-radius:50%}
+
+/* PAIN */
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.pain-card{background:var(--card);padding:32px 24px;border-radius:16px;border:1px solid var(--border);transition:all .25s}
+.pain-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08);border-color:#c4c4c4}
+.pain-card .emoji{font-size:36px;margin-bottom:12px}
+.pain-card h3{font-size:17px;margin-bottom:8px}
+.pain-card p{font-size:14px;color:var(--sub);line-height:1.7}
+
+/* VS */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+@media(max-width:768px){.vs-grid{grid-template-columns:1fr}}
+.vs-box{padding:48px 36px;border-radius:20px;text-align:center}
+.vs-bad{background:#fef2f2;border:2px solid #fecaca}
+.vs-good{background:#f0fdf4;border:2px solid #bbf7d0;position:relative}
+.vs-good::after{content:"推荐";position:absolute;top:-12px;right:24px;background:var(--green);color:#fff;padding:2px 16px;border-radius:50px;font-size:12px;font-weight:700}
+.vs-box h3{font-size:24px;margin-bottom:24px}
+.vs-box ul{list-style:none;text-align:left;max-width:360px;margin:0 auto}
+.vs-box li{padding:8px 0;font-size:15px;display:flex;align-items:center;gap:8px}
+.vs-bad li::before{content:"✕";color:#ef4444;font-weight:bold;font-size:12px;flex-shrink:0;width:20px;text-align:center}
+.vs-good li::before{content:"✓";color:var(--green);font-weight:bold;flex-shrink:0;width:20px;text-align:center}
+.vs-conclusion{text-align:center;margin-top:32px;font-size:18px;font-weight:700;color:var(--text)}
+
+/* THREE */
+.three-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.card3{background:var(--card);padding:40px 32px;border-radius:20px;border:1px solid var(--border);text-align:center;transition:all .25s}
+.card3:hover{box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.card3 .icon-circle{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px}
+.card3.red .icon-circle{background:#fef2f2}
+.card3.yellow .icon-circle{background:#fefce8}
+.card3.green .icon-circle{background:#f0fdf4}
+.card3 h3{font-size:20px;margin-bottom:12px}
+.card3 p{font-size:15px;color:var(--sub);line-height:1.8}
+
+/* STORIES */
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.story-card{background:var(--card);padding:32px;border-radius:16px;border:1px solid var(--border);border-left:4px solid var(--accent2);transition:all .25s}
+.story-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.story-card .quote{font-size:15px;color:var(--sub);line-height:1.8;margin-bottom:16px;font-style:italic}
+.story-card .author{font-size:13px;color:#888;font-weight:600}
+.story-card .tag{display:inline-block;background:#f0f4ff;color:var(--accent);padding:2px 10px;border-radius:50px;font-size:12px;margin-bottom:12px}
+
+/* RULES */
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.rule-chip{background:var(--card);padding:20px 18px;border-radius:12px;border:1px solid var(--border);font-size:14px;cursor:default;transition:all .2s}
+.rule-chip:hover{background:#f0f4ff;border-color:var(--accent)}
+.rule-chip .r-name{font-weight:700;margin-bottom:4px}
+.rule-chip .r-for{font-size:12px;color:var(--sub)}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:start}
+.price-card{background:var(--card);padding:40px 32px;border-radius:20px;border:1px solid var(--border);text-align:center;transition:all .25s;position:relative}
+.price-card.featured{border:2px solid var(--accent2);transform:scale(1.04);box-shadow:0 12px 40px rgba(233,69,96,.12)}
+.price-card.featured::before{content:"⭐ 最受欢迎";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent2);color:#fff;padding:4px 20px;border-radius:50px;font-size:13px;font-weight:700;white-space:nowrap}
+.price-card h4{font-size:16px;color:var(--sub);margin-bottom:4px}
+.price-card .price{font-size:48px;font-weight:900;margin:16px 0 4px}
+.price-card .price span{font-size:16px;color:var(--sub);font-weight:400}
+.price-card ul{list-style:none;text-align:left;margin:24px 0}
+.price-card li{padding:8px 0;font-size:14px;display:flex;align-items:center;gap:8px}
+.price-card li::before{content:"✓";color:var(--green);font-weight:bold;flex-shrink:0}
+.price-card .btn{display:block;background:var(--accent2);color:#fff;padding:14px;border-radius:50px;font-weight:700;font-size:16px;text-decoration:none;transition:all .2s}
+.price-card .btn:hover{opacity:.9;transform:translateY(-1px)}
+.price-card.featured .btn{background:#fff;color:var(--accent2);border:2px solid var(--accent2)}
+.price-card.featured .btn:hover{background:var(--accent2);color:#fff}
+.price-note{text-align:center;margin-top:24px;color:var(--sub);font-size:15px}
+
+/* FAQ */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{background:var(--card);padding:24px 28px;border-radius:12px;border:1px solid var(--border);margin-bottom:12px;transition:all .2s}
+.faq-item:hover{border-color:#c4c4c4}
+.faq-item h4{font-size:16px;margin-bottom:8px;cursor:default}
+.faq-item p{font-size:14px;color:var(--sub);line-height:1.8}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;text-align:center}
+.cta-section h2{color:#fff;font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.cta-section .cta-sub{font-size:18px;opacity:.8;margin-bottom:32px}
+.cta-section .cta-primary{display:inline-block;background:var(--accent2);color:#fff;padding:18px 56px;border-radius:50px;font-size:20px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 8px 30px rgba(233,69,96,.4)}
+.cta-section .cta-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(233,69,96,.6)}
+.cta-section .cta-note{margin-top:20px;font-size:14px;opacity:.6}
+
+footer{text-align:center;padding:48px 24px;color:var(--sub);font-size:14px;border-top:1px solid var(--border)}
+footer a{color:var(--accent);text-decoration:none}
+
+@media(max-width:640px){
+  section{padding:60px 0}
+  .hero{padding:100px 0 80px}
+  .hero h1{font-size:32px}
+  .price-card.featured{transform:none}
+}
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <h1>每天3分钟，让团队自己管自己</h1>
-  <p class="sub">「傻瓜绩效管人」——专为5-50人小老板设计的公平管人系统。<br>不懂绩效？没关系。不想学管理？没关系。30秒开跑，第一个月免费。</p>
-  <a href="#cta" class="cta">🔥 免费试用30天</a>
-  <p class="trust">🟢 第一个月不扣钱 · 不处罚 · 不公开排名 | 87位小老板正在试用</p>
-</section>
-
-<section>
-  <h2>你是不是也在经历这些？</h2>
-  <p class="section-sub">5件事，件件要命</p>
-  <div class="pain-grid">
-    <div class="pain-card"><div class="icon">😤</div><h4>好员工走了</h4><p>干最多的人没被看见，等他提离职你才后悔</p></div>
-    <div class="pain-card"><div class="icon">😶</div><h4>亲戚不敢说</h4><p>张嘴就是不给面子，不张嘴团队不服</p></div>
-    <div class="pain-card"><div class="icon">😵</div><h4>天天调解扯皮</h4><p>销售骂后勤慢，后勤骂销售乱承诺</p></div>
-    <div class="pain-card"><div class="icon">😩</div><h4>凭感觉做决定</h4><p>谁该涨薪说不清，谁该辞退没证据</p></div>
-    <div class="pain-card"><div class="icon">🤐</div><h4>说了也没人服</h4><p>"你凭什么说我不好？"——没数据就没底气</p></div>
+<nav>
+  <div class="container">
+    <a href="#" class="logo">傻瓜绩效<span>管人</span></a>
+    <a href="#cta" class="nav-cta">免费试用</a>
   </div>
-</section>
+</nav>
 
-<section style="background:#f0f4ff">
-  <h2>我们不是帮你"算账"<br>是帮你"设计游戏规则"</h2>
-  <div class="vs" style="margin-top:40px">
-    <div class="vs-box vs-bad">
-      <h3>传统绩效软件</h3>
-      <ul>
-        <li>你设计制度 → 系统计算</li>
-        <li>适合大公司、有HR</li>
-        <li>要学KPI/OKR</li>
-        <li>功能多到你眼花</li>
-        <li>上来就要你填表</li>
-      </ul>
+<section class="hero" id="top">
+  <div class="container">
+    <div class="badge">🔥 <b>87位小老板</b>正在试用</div>
+    <h1>每天3分钟<br>让团队自己管自己</h1>
+    <p class="hero-sub">不懂绩效？没关系。不想学管理？没关系。<br>30秒选行业、点确认。第一个月免费。</p>
+    <div class="cta-group">
+      <a href="#cta" class="cta-primary">🔥 免费试用30天</a>
+      <a href="#how" class="cta-secondary">看看怎么运作 →</a>
     </div>
-    <div class="vs-box vs-good">
-      <h3>傻瓜绩效管人</h3>
-      <ul>
-        <li>你选规则包 → 系统帮你执行</li>
-        <li>适合5-50人、老板亲自管</li>
-        <li>30秒选行业、点确定</li>
-        <li>每天只看3分钟</li>
-        <li>第一个月只记录不处罚</li>
-      </ul>
-    </div>
-  </div>
-  <p style="text-align:center;margin-top:32px;font-size:18px;font-weight:600">不是老板针对谁。是规则、是数据、是三个月记录在说话。</p>
-</section>
-
-<section>
-  <h2>三榜定乾坤</h2>
-  <p class="section-sub">好的表扬，差的提醒，严重的处理</p>
-  <div class="three-cards">
-    <div class="card">
-      <div class="big-emoji">🟢</div>
-      <h3>红榜（公开）</h3>
-      <p>优秀的人、进步的人、爱帮人的人。让全公司知道谁值得学。不是老板口头夸一句，是系统记录、全员可见。</p>
-    </div>
-    <div class="card">
-      <div class="big-emoji">🟡</div>
-      <h3>灰榜（私密）</h3>
-      <p>有点问题的人、需要提醒的人。只有老板和本人能看见。不是公开处刑，是轻轻拍一下肩膀。大多数人收到就改了。</p>
-    </div>
-    <div class="card">
-      <div class="big-emoji">🔴</div>
-      <h3>风险榜（触发面谈）</h3>
-      <p>连续拖后腿的人。系统帮你准备好所有数据、趋势图和面谈提纲。你永远是做决定的人。系统只帮你说清楚。</p>
+    <div class="trust-bar">
+      <div><span class="dot"></span> 不扣钱</div>
+      <div><span class="dot"></span> 不处罚</div>
+      <div><span class="dot"></span> 不公开排名</div>
+      <div><span class="dot"></span> 30天无条件停用</div>
     </div>
   </div>
 </section>
 
-<section style="background:#fafafa">
-  <h2>他们已经在用了</h2>
-  <div class="story"><p class="quote">"我小舅子在仓库拖了3年。不是系统多厉害，是有了数据，我终于敢开口了。没吵一句，两个月后准时率从31%提到71%。"</p><p class="author">—— 五金店老板老张，12人团队</p></div>
-  <div class="story"><p class="quote">"店里最勤快的那个美容师，干了3年，第一次被当众表扬的时候哭了。她以为我一直没看见。红榜让她被全店看见了。"</p><p class="author">—— 美容院苏姐，8人团队</p></div>
-  <div class="story"><p class="quote">"销售和后勤吵了两年。启用助攻分后，互相帮忙的次数翻了3倍。不是人变了，是规则变了。"</p><p class="author">—— 装修公司阿强，18人团队</p></div>
-</section>
-
-<section id="cta">
-  <h2>试一个月不要钱。合适继续，不合适停掉。</h2>
-  <div class="pricing-grid" style="margin-top:40px">
-    <div class="price-card">
-      <h3>基础版</h3>
-      <p>5-10人团队</p>
-      <div class="price">¥199<span>/月</span></div>
-      <ul><li>8套规则包</li><li>三榜机制</li><li>助攻分</li><li>基础榜单</li><li>30天免费试用</li></ul>
-      <a href="#" class="btn">免费试用 →</a>
-    </div>
-    <div class="price-card featured">
-      <h3>标准版 ⭐推荐</h3>
-      <p>11-30人团队</p>
-      <div class="price">¥399<span>/月</span></div>
-      <ul><li>8套规则包+自定义</li><li>全部榜单</li><li>面谈整改复评</li><li>多维度排名</li><li>30天免费试用</li></ul>
-      <a href="#" class="btn">免费试用 →</a>
-    </div>
-    <div class="price-card">
-      <h3>专业版</h3>
-      <p>31-50人团队</p>
-      <div class="price">¥699<span>/月</span></div>
-      <ul><li>全部功能</li><li>AI面谈教练</li><li>专属顾问</li><li>高级数据分析</li><li>30天免费试用</li></ul>
-      <a href="#" class="btn">免费试用 →</a>
+<section id="pain">
+  <div class="container">
+    <div class="section-label">你是不是也在经历这些？</div>
+    <h2>5件事，件件要命</h2>
+    <div class="pain-grid">
+      <div class="pain-card"><div class="emoji">😤</div><h3>好员工悄悄走了</h3><p>干最多的人没被看见。等他提离职你才后悔，但已经晚了。</p></div>
+      <div class="pain-card"><div class="emoji">😶</div><h3>亲戚员工不敢说</h3><p>张嘴就是"不给面子"，不张嘴团队觉得不公平。过年还要一起吃饭。</p></div>
+      <div class="pain-card"><div class="emoji">😵</div><h3>天天当裁判</h3><p>销售骂后勤慢，后勤骂销售乱承诺。你每天在中间调解，生意都没时间做。</p></div>
+      <div class="pain-card"><div class="emoji">😩</div><h3>凭感觉做决定</h3><p>加薪靠印象，辞退靠直觉。员工问"凭什么"，你拿不出证据。</p></div>
+      <div class="pain-card"><div class="emoji">🤐</div><h3>说了也没人服</h3><p>"你为什么只说我？""别人也这样！"——没有数据支撑的管理，注定变成争吵。</p></div>
     </div>
   </div>
-  <p style="text-align:center;margin-top:24px;color:#888">别算系统多少钱，算你因为"不公平"走了几个好员工，损失了多少钱。</p>
 </section>
 
-<section>
-  <h2>常见问题</h2>
-  <div class="faq-item"><h4>员工会不会抵触？</h4><p>第一个月只记录、不处罚、不公开排名。让员工先看见规则是公平的。我们见过太多：第一个月骂系统，第二个月发现红榜没自己，第三个月主动表现。</p></div>
-  <div class="faq-item"><h4>太复杂怎么办？</h4><p>30秒选行业、点确定。每天看3分钟手机。超过3分钟你来找我。名字叫"傻瓜"不是开玩笑。</p></div>
-  <div class="faq-item"><h4>5个人能用吗？</h4><p>专门有5人以内简化版——不搞公开排名，只帮你记录和提醒。越小越需要规则。</p></div>
-  <div class="faq-item"><h4>亲戚员工怎么管？</h4><p>有专门的"人情员工管理型"规则包。不是老板针对谁，是数据说话。老板只是"传达数据的人"。</p></div>
+<section id="how" style="background:#fff">
+  <div class="container">
+    <div class="section-label">我们和传统绩效软件完全不同</div>
+    <h2>不是帮你"算账"<br>是帮你"设计游戏规则"</h2>
+    <div class="vs-grid" style="margin-top:48px">
+      <div class="vs-box vs-bad">
+        <h3>传统绩效软件</h3>
+        <ul>
+          <li>你自己设计制度，系统只管计算</li>
+          <li>给大公司HR用的，需要专业知识</li>
+          <li>要学KPI、OKR、平衡记分卡</li>
+          <li>功能几十项，90%你用不上</li>
+          <li>一上来就让你填表、设权重</li>
+          <li>员工觉得"又来监控我了"</li>
+        </ul>
+      </div>
+      <div class="vs-box vs-good">
+        <h3>傻瓜绩效管人</h3>
+        <ul>
+          <li>你选规则包，系统帮你全自动执行</li>
+          <li>给5-50人小老板用的，不需要HR</li>
+          <li>30秒选行业、点确定</li>
+          <li>老板每天只看3分钟</li>
+          <li>第一个月只记录、不扣钱、不处罚</li>
+          <li>员工发现"这是在帮我说话"</li>
+        </ul>
+      </div>
+    </div>
+    <p class="vs-conclusion">不是老板针对谁。是规则、是数据、是三个月记录在说话。你永远做决定的人。系统只是帮你说出那些你不方便说的话。</p>
+  </div>
 </section>
 
-<div class="final-cta">
-  <h2>你那个"不敢管"的员工<br>还要拖你多久？</h2>
-  <p style="font-size:18px;opacity:.9;margin:16px 0">第一个月免费。不扣钱、不处罚、不公开。<br>30天后没效果？直接停掉。你什么都不损失。</p>
-  <a href="#" class="cta">🔥 免费试用30天</a>
+<section id="three">
+  <div class="container">
+    <div class="section-label">三榜定乾坤</div>
+    <h2>好的表扬，差的提醒，严重的处理</h2>
+    <p class="section-sub">不是什么高深理论——就是把所有老板都该做的事系统化了</p>
+    <div class="three-grid">
+      <div class="card3 green">
+        <div class="icon-circle">🌟</div>
+        <h3>红榜 · 公开表扬</h3>
+        <p>优秀的人、进步的人、爱帮人的人。<br>系统自动生成表扬词，老板一键发布。<br>让全公司知道：在这个团队，努力会被看见。</p>
+      </div>
+      <div class="card3 yellow">
+        <div class="icon-circle">💡</div>
+        <h3>灰榜 · 私密提醒</h3>
+        <p>有点问题的人、需要提醒的人。<br>只有老板和本人能看到。<br>不是公开处刑，是轻轻拍一下肩膀。大多数人收到就改了。</p>
+      </div>
+      <div class="card3 red">
+        <div class="icon-circle">🎯</div>
+        <h3>风险榜 · 面谈改进</h3>
+        <p>连续拖后腿的人。<br>系统帮你准备好所有数据、趋势图和面谈提纲。<br>提醒→面谈→整改→复评→老板决定。给足机会，数据说话。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="container">
+    <div class="section-label">8套规则包</div>
+    <h2>30秒对号入座，不用学管理</h2>
+    <p class="section-sub">选你的行业→选团队规模→点确定。剩下的系统全自动。</p>
+    <div class="rules-grid">
+      <div class="rule-chip"><div class="r-name">💪 销售冲刺型</div><div class="r-for">房产/装修/招商/课程顾问</div></div>
+      <div class="rule-chip"><div class="r-name">🏪 门店稳定型</div><div class="r-for">美容/餐饮/汽修/五金门店</div></div>
+      <div class="rule-chip"><div class="r-name">🤝 后勤协作型</div><div class="r-for">仓库/文员/客服/技术支持</div></div>
+      <div class="rule-chip"><div class="r-name">⚖️ 通用均衡型</div><div class="r-for">5-15人混合小团队，第一次使用推荐</div></div>
+      <div class="rule-chip"><div class="r-name">🌱 新人保护型</div><div class="r-for">学徒多/试用期/销售新人</div></div>
+      <div class="rule-chip"><div class="r-name">🔓 老员工激活型</div><div class="r-for">老员工不带新人/团队僵化</div></div>
+      <div class="rule-chip"><div class="r-name">👨‍👩‍👦 人情员工型</div><div class="r-for">亲戚/朋友/熟人关系复杂的团队</div></div>
+      <div class="rule-chip"><div class="r-name">🚀 长周期项目型</div><div class="r-for">研发/招商/大客户/新业务探索</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="stories">
+  <div class="container">
+    <div class="section-label">他们已经在用了</div>
+    <h2>真实老板，真实变化</h2>
+    <div class="stories" style="margin-top:48px">
+      <div class="story-card">
+        <div class="tag">五金店 · 12人</div>
+        <div class="quote">"我小舅子在仓库拖了8年，准时率全店最低31%。以前不敢说——我老婆不让。有了系统，我把三个月数据甩在桌上：'不是我说你，是数据说的。'没吵一句，两个月后准时率提到71%。"</div>
+        <div class="author">—— 老张，上海五金店老板</div>
+      </div>
+      <div class="story-card">
+        <div class="tag">美容院 · 8人</div>
+        <div class="quote">"店里最能干的美容师，干了3年从没被专门表扬过。第一次上红榜那天，晨会上我念了系统生成的表扬词——她当场哭了。她说'姐，我以为你从来不知道我做这些。'现在她是店长。"</div>
+        <div class="author">—— 苏姐，连锁美容院</div>
+      </div>
+      <div class="story-card">
+        <div class="tag">装修公司 · 18人</div>
+        <div class="quote">"销售和后勤天天吵架，吵了两年。用了助攻分之后——销售给后勤线索能加分，后勤给销售报价及时也能加分。两个月后互相帮忙次数翻了3倍。不是人变了，是规则变了。"</div>
+        <div class="author">—— 阿强，装修公司老板</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" style="background:#fff">
+  <div class="container">
+    <div class="section-label">定价</div>
+    <h2>试一个月不要钱。合适继续，不合适停掉。</h2>
+    <div class="pricing-grid" style="margin-top:48px">
+      <div class="price-card">
+        <h4>5-10人团队</h4>
+        <div class="price">¥199<span>/月</span></div>
+        <ul>
+          <li>8套预设规则包</li>
+          <li>红榜·灰榜·风险榜</li>
+          <li>助攻分+防刷机制</li>
+          <li>员工端功劳簿</li>
+          <li>30天免费试用</li>
+        </ul>
+        <a href="#" class="btn">免费试用 →</a>
+      </div>
+      <div class="price-card featured">
+        <h4>11-30人团队</h4>
+        <div class="price">¥399<span>/月</span></div>
+        <ul>
+          <li>基础版全部 +</li>
+          <li>多维度排名</li>
+          <li>面谈整改复评全套</li>
+          <li>行业/阶段自动适配</li>
+          <li>老板沟通偏好4种模式</li>
+          <li>30天免费试用</li>
+        </ul>
+        <a href="#" class="btn">免费试用 →</a>
+      </div>
+      <div class="price-card">
+        <h4>31-50人团队</h4>
+        <div class="price">¥699<span>/月</span></div>
+        <ul>
+          <li>标准版全部 +</li>
+          <li>AI面谈教练</li>
+          <li>积分商城双轨制</li>
+          <li>专属顾问对接</li>
+          <li>高级数据分析</li>
+          <li>30天免费试用</li>
+        </ul>
+        <a href="#" class="btn">免费试用 →</a>
+      </div>
+    </div>
+    <p class="price-note">别算系统多少钱。算你因为"不公平"走了几个好员工，损失了多少钱。<br>一个好员工离职，招聘成本至少5000。留住一个就回本了。</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>常见问题</h2>
+    <div class="faq-list" style="margin-top:48px">
+      <div class="faq-item"><h4>员工会不会很抵触？</h4><p>会。第一周肯定有人骂。所以我们设计了30天试运行：只记录、不扣钱、不处罚、不公开排名。等员工发现系统不是来罚人的——是帮努力的人被看见的，态度就变了。我们见过太多：第一个月骂系统，第二个月发现红榜没自己，第三个月开始主动表现。</p></div>
+      <div class="faq-item"><h4>太复杂怎么办？我不懂管理。</h4><p>就是给不懂管理的人用的。名字叫"傻瓜"不是开玩笑。30秒：选行业→选团队人数→点确定。每天看3分钟手机。超过3分钟你来找我。</p></div>
+      <div class="faq-item"><h4>才5个人，用得着吗？</h4><p>正因为人少，才更需要规则。5个人的团队，一个人摸鱼就是20%的产能浪费。有5人以内的简化版：不搞公开排名、不搞末位淘汰——就是帮你记录和提醒，比你凭记忆管强一百倍。</p></div>
+      <div class="faq-item"><h4>亲戚员工怎么管？</h4><p>有专门的"人情员工公平管理型"规则包。原理很简单：不是老板针对谁，是规则和数据在说话。老板不需要当坏人——他只是"传达数据的人"。还支持文字沟通和系统代提醒模式，减少当面压力。</p></div>
+      <div class="faq-item"><h4>数据安全吗？</h4><p>加密存储。员工互相看不到别人的分数和灰榜。灰榜只有老板和本人可见，风险榜老板和当事人可见。个人的绩效数据不公开。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section" id="final-cta">
+  <div class="container">
+    <h2>你那个"不敢管"的员工<br>还要拖你多久？</h2>
+    <p class="cta-sub">第一个月免费。不扣钱、不处罚、不公开排名。<br>30天后没效果？直接停掉。你什么都不损失。</p>
+    <a href="#" class="cta-primary">🔥 免费试用30天</a>
+    <p class="cta-note">联系微信：ssj-001 ｜ 邮箱：447923446@qq.com</p>
+  </div>
 </div>
 
 <footer>
-  <p>「傻瓜绩效管人」· 小老板公平管人系统 | 5-50人小微企业专属</p>
-  <p>联系微信：ssj-001 | 邮箱：447923446@qq.com</p>
+  <div class="container">
+    <p><strong>傻瓜绩效管人</strong> · 小老板公平管人系统</p>
+    <p style="margin-top:8px">5-50人小微企业专属 ｜ 不需要HR，不需要学管理，30秒开跑</p>
+    <p style="margin-top:16px"><a href="#top">↑ 回到顶部</a></p>
+  </div>
 </footer>
 
 </body>
