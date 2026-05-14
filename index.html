@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>傻瓜绩效管人 — 让团队自己跑起来</title>
 <meta name="description" content="从「天天盯人」到「团队自转」。不是管人工具，是让员工自动自发、全员对齐成交的底层驱动引擎。5-50人小微企业专属。">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/logo-nav.png">
 <style>
 :root{
   --bg:#fafbfd; --card:#fff; --text:#0f172a; --sub:#64748b; --muted:#94a3b8;
@@ -32,8 +34,9 @@ h2{font-size:clamp(26px,3.8vw,40px);text-align:center;font-weight:900;letter-spa
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(20px) saturate(1.8);-webkit-backdrop-filter:blur(20px) saturate(1.8);border-bottom:1px solid var(--border);transition:all .3s}
 nav .container{display:flex;align-items:center;justify-content:space-between;height:62px}
-nav .logo{font-weight:850;font-size:19px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px}
-nav .logo-dot{width:10px;height:10px;background:var(--accent2);border-radius:50%;display:inline-block}
+nav .logo{font-weight:800;font-size:18px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px}
+nav .logo img{height:32px;width:auto;transition:transform .4s ease,filter .4s ease;filter:drop-shadow(0 1px 2px rgba(0,0,0,.05))}
+nav .logo:hover img{transform:scale(1.08);filter:drop-shadow(0 2px 8px rgba(244,63,94,.25))}
 nav .cta-btn{background:var(--accent2);color:#fff;padding:9px 22px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 2px 8px rgba(244,63,94,.25)}
 nav .cta-btn:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(244,63,94,.4)}
 
@@ -151,7 +154,7 @@ footer{text-align:center;padding:48px 24px;color:var(--muted);font-size:13px;bor
 <body>
 
 <nav><div class="container">
-  <a href="#" class="logo"><span class="logo-dot"></span>傻瓜绩效管人</a>
+  <a href="#" class="logo"><img src="images/logo-nav.png" alt="傻瓜绩效管人" width="32" height="32">傻瓜绩效管人</a>
   <a href="#cta" class="cta-btn">免费试用</a>
 </div></nav>
 
@@ -316,9 +319,10 @@ footer{text-align:center;padding:48px 24px;color:var(--muted);font-size:13px;bor
 </div>
 
 <footer>
-  <div class="container">
+  <div class="container" style="display:flex;flex-direction:column;align-items:center;gap:8px">
+    <img src="images/logo-footer.png" alt="傻瓜绩效管人" style="height:28px;width:auto;opacity:.8">
     <p><strong>傻瓜绩效管人</strong> · 让团队自己跑起来</p>
-    <p style="margin-top:4px">5-50人小微企业专属 ｜ 不需要HR ｜ 不需要学管理 ｜ 30秒开跑</p>
+    <p style="margin-top:0px">5-50人小微企业专属 ｜ 不需要HR ｜ 不需要学管理 ｜ 30秒开跑</p>
   </div>
 </footer>
 
