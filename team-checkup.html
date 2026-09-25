@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用 6 个问题快速自查小团队从客户线索到成交、交付、回款的协作断点。无需注册，不上传答案。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="团队成交断点自查｜AI团队自驱">
+  <meta property="og:description" content="6 个问题，看清客户、成交、交付与回款之间哪里容易断。无需注册。">
+  <meta property="og:url" content="https://songshujun-001.github.io/shaguajixiaoguanren1/team-checkup.html">
+  <link rel="canonical" href="https://songshujun-001.github.io/shaguajixiaoguanren1/team-checkup.html">
+  <title>团队成交断点自查｜6 个问题看清协作问题</title>
+  <style>
+    :root { color-scheme: light; --ink:#17382f; --muted:#536b61; --green:#176b4c; --light:#e8f5ee; --line:#d8e7de; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f4f8f5; color:var(--ink); font:16px/1.65 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+    a { color:var(--green); }
+    .wrap { width:min(100% - 32px,780px); margin:auto; }
+    header { background:linear-gradient(135deg,#0d3b2d,#19714f); color:#fff; padding:54px 0 46px; }
+    .eyebrow { display:inline-block; padding:4px 12px; border:1px solid #ffffff70; border-radius:99px; font-size:14px; }
+    h1 { font-size:clamp(30px,5vw,48px); line-height:1.2; margin:18px 0 12px; letter-spacing:-.03em; }
+    .lead { max-width:660px; margin:0; color:#e0f2e8; font-size:18px; }
+    .facts { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .facts span { background:#ffffff1f; border-radius:99px; padding:5px 12px; font-size:14px; }
+    main { padding:30px 0 60px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:18px; box-shadow:0 8px 30px #103e2510; padding:26px; margin:18px 0; }
+    .card h2 { margin:0 0 8px; font-size:22px; }
+    .intro { color:var(--muted); margin:0; }
+    fieldset { border:0; border-top:1px solid var(--line); padding:22px 0 4px; margin:0; }
+    fieldset:first-of-type { border-top:0; }
+    legend { display:block; width:100%; font-size:18px; font-weight:700; padding:0 0 12px; }
+    .options { display:flex; flex-wrap:wrap; gap:10px; }
+    label { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--line); border-radius:10px; padding:10px 14px; cursor:pointer; background:#fff; }
+    label:has(input:checked) { background:var(--light); border-color:var(--green); }
+    input[type=radio] { accent-color:var(--green); width:18px; height:18px; margin:0; }
+    button,.button { appearance:none; display:inline-block; border:0; border-radius:10px; background:var(--green); color:#fff; padding:12px 20px; font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
+    button:hover,.button:hover { background:#105338; color:#fff; }
+    .secondary { background:#e7f2eb; color:var(--ink); }
+    .secondary:hover { background:#d7e9dc; color:var(--ink); }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .hint { min-height:26px; color:#9a471e; margin:10px 0 0; }
+    #result[hidden] { display:none; }
+    .score { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin:8px 0; }
+    .score strong { font-size:42px; line-height:1; color:var(--green); }
+    .score span { color:var(--muted); }
+    .next-list { padding-left:22px; }
+    .next-list li { margin:8px 0; }
+    .note { color:var(--muted); font-size:14px; }
+    footer { border-top:1px solid var(--line); padding:24px 0 40px; color:var(--muted); font-size:14px; }
+    @media(max-width:550px) { header{padding:40px 0 34px}.card{padding:19px}.options{display:grid}label{width:100%} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="eyebrow">AI团队自驱 · 免费自查</span>
+      <h1>团队很忙，成交为什么还卡着？</h1>
+      <p class="lead">从客户线索到回款，回答 6 个问题，找出最值得先处理的协作断点。</p>
+      <div class="facts"><span>约 2 分钟</span><span>无需注册</span><span>答案只在当前页面计算</span></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="card" aria-labelledby="check-title">
+      <h2 id="check-title">团队成交断点自查</h2>
+      <p class="intro">按团队平时的实际做法选择。如果不同成员做法不一，请选“有时能做到”。</p>
+      <form id="check-form">
+        <fieldset><legend>1. 新客户线索有明确负责人和下次跟进时间吗？</legend><div class="options"><label><input type="radio" name="q1" value="0">稳定做到</label><label><input type="radio" name="q1" value="1">有时能做到</label><label><input type="radio" name="q1" value="2">基本没做到</label></div></fieldset>
+        <fieldset><legend>2. 每个商机当前处于哪个成交阶段，团队能随时查到吗？</legend><div class="options"><label><input type="radio" name="q2" value="0">稳定做到</label><label><input type="radio" name="q2" value="1">有时能做到</label><label><input type="radio" name="q2" value="2">基本没做到</label></div></fieldset>
+        <fieldset><legend>3. 销售承诺转交交付时，有责任人、内容和截止时间吗？</legend><div class="options"><label><input type="radio" name="q3" value="0">稳定做到</label><label><input type="radio" name="q3" value="1">有时能做到</label><label><input type="radio" name="q3" value="2">基本没做到</label></div></fieldset>
+        <fieldset><legend>4. 逾期回款能按客户、金额和负责人定期追踪吗？</legend><div class="options"><label><input type="radio" name="q4" value="0">稳定做到</label><label><input type="radio" name="q4" value="1">有时能做到</label><label><input type="radio" name="q4" value="2">基本没做到</label></div></fieldset>
+        <fieldset><legend>5. 每周复盘看的是客户、成交、交付和回款，而不只是忙碌时长吗？</legend><div class="options"><label><input type="radio" name="q5" value="0">稳定做到</label><label><input type="radio" name="q5" value="1">有时能做到</label><label><input type="radio" name="q5" value="2">基本没做到</label></div></fieldset>
+        <fieldset><legend>6. 出现延期或流失时，能定位流程问题并确定下一步改法吗？</legend><div class="options"><label><input type="radio" name="q6" value="0">稳定做到</label><label><input type="radio" name="q6" value="1">有时能做到</label><label><input type="radio" name="q6" value="2">基本没做到</label></div></fieldset>
+        <div class="actions"><button type="submit">查看我的自查结果</button><button type="button" class="secondary" id="copy-link">复制自查链接</button></div>
+        <p class="hint" id="hint" role="status"></p>
+      </form>
+    </section>
+    <section class="card" id="result" aria-live="polite" hidden>
+      <h2>你的自查结果</h2>
+      <div class="score"><strong id="score"></strong><span>断点提示分 / 12 分；分数越高，越值得先梳理流程</span></div>
+      <p id="summary"></p>
+      <h3 id="next-heading">先做这两步</h3>
+      <ol class="next-list" id="next-steps"></ol>
+      <p class="note">这是帮助团队讨论的自查提示，不是专业诊断，也不预测业绩。</p>
+      <div class="actions"><a class="button" href="https://www.brde.cn/products/ai-team-system">了解 AI团队自驱</a><a class="button secondary" href="https://www.brde.cn/support?topic=product_access&amp;product=ai-team-system">咨询是否适合我的团队</a></div>
+    </section>
+  </main>
+  <footer><div class="wrap">AI团队自驱 · <a href="https://www.brde.cn/products/ai-team-system">产品介绍</a> · 本页不收集或上传填写的答案。</div></footer>
+  <script>
+    const steps = [
+      "给每条新线索指定唯一负责人，并记录下一次跟进时间。",
+      "把商机统一放进可查看的阶段清单，每周核对停滞项目。",
+      "销售转交交付时，写清承诺内容、责任人和截止时间。",
+      "建立逾期回款清单，按客户、金额和负责人每周更新。",
+      "每周复盘客户、成交、交付、回款的变化，并确定下周重点。",
+      "遇到延期或流失，记录发生在哪个环节和下一次要改的动作。"
+    ];
+    document.getElementById("check-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const values = steps.map((_, index) => {
+        const chosen = document.querySelector('input[name="q' + (index + 1) + '"]:checked');
+        return chosen ? Number(chosen.value) : null;
+      });
+      const hint = document.getElementById("hint");
+      if (values.includes(null)) {
+        hint.textContent = "请先回答全部 6 个问题。";
+        return;
+      }
+      hint.textContent = "";
+      const total = values.reduce((sum, value) => sum + value, 0);
+      document.getElementById("score").textContent = total;
+      document.getElementById("summary").textContent = total <= 3
+        ? "基础流程已有一定秩序。继续保持记录与复盘，优先修补偶发断点。"
+        : total <= 7
+          ? "团队存在一些容易被忙碌掩盖的协作断点。先选最影响成交的一两项处理。"
+          : "多个关键环节缺少稳定做法。先建立负责人、状态和每周复盘，再考虑增加工具。";
+      const priorities = total === 0
+        ? ["继续保持每周复盘，记录各环节的负责人、状态和截止时间。", "每月抽查一次流失商机与逾期回款，及时发现新问题。"]
+        : values.map((value, index) => ({ value, index }))
+          .filter(item => item.value > 0)
+          .sort((a, b) => b.value - a.value || a.index - b.index)
+          .slice(0, 2)
+          .map(item => steps[item.index]);
+      document.getElementById("next-heading").textContent = priorities.length === 1 ? "先做这一步" : "先做这两步";
+      document.getElementById("next-steps").replaceChildren(...priorities.map(action => {
+        const li = document.createElement("li");
+        li.textContent = action;
+        return li;
+      }));
+      const result = document.getElementById("result");
+      result.hidden = false;
+      result.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    document.getElementById("copy-link").addEventListener("click", async function () {
+      const hint = document.getElementById("hint");
+      try {
+        await navigator.clipboard.writeText(location.href);
+        hint.textContent = "链接已复制，可以发给同事一起自查。";
+      } catch (_) {
+        hint.textContent = "复制失败，请从浏览器地址栏复制本页链接。";
+      }
+    });
+  </script>
+</body>
+</html>
